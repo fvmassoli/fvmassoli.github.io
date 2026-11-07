@@ -25,7 +25,7 @@
 
 - title: "When Do Stored Facts Become Available in Looped Transformers?"
   authors: "Fabio Valerio Massoli et al."
-  venue: "Under review"
+  venue: "arXiv"
   year: 2026
   selected: false
   topics: [Looped LMs]
@@ -33,7 +33,7 @@
 
 - title: "Enabling Dynamic Computation in Looped LMs"
   authors: "Aayush Mishra, Arnau Padrés Masdemont, Victor Conchello Vendrell, Jordi Ros Giralt, Arash Behboodi, Fabio Valerio Massoli"
-  venue: "Under review"
+  venue: "arXiv"
   year: 2026
   selected: true
   image: /assets/img/pubs/dynamic.png
@@ -44,7 +44,7 @@
 
 - title: "Memory-Efficient Looped Transformer: Decoupling Compute from Memory in Looped Language Models"
   authors: "Victor Conchello Vendrell, Arnau Padres Masdemont, Niccolò Grillo, Jordi Ros-Giralt, Arash Behboodi, Fabio Valerio Massoli"
-  venue: "Under review"
+  venue: "arXiv"
   year: 2026
   selected: true
   image: /assets/img/pubs/melt.png
