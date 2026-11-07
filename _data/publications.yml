@@ -9,7 +9,7 @@
   venue: "NeurIPS"
   year: 2026
   selected: true
-  image: /assets/img/pubs/cib.svg
+  image: /assets/img/pubs/cib.png
   topics: [Efficient reasoning, Information theory, RL]
   tldr: "Treats chain-of-thought as lossy compression. A conditional information bottleneck yields an RL objective that removes redundant reasoning tokens and keeps the ones that matter, with length penalties as a special case."
   links:
@@ -36,7 +36,7 @@
   venue: "Under review"
   year: 2026
   selected: true
-  image: /assets/img/pubs/dynamic.svg
+  image: /assets/img/pubs/dynamic.png
   topics: [Looped LMs, Efficient reasoning]
   tldr: "Per-token adaptive depth for looped language models: easy tokens leave the loop early, hard tokens keep iterating."
   links:
@@ -47,7 +47,7 @@
   venue: "Under review"
   year: 2026
   selected: true
-  image: /assets/img/pubs/melt.svg
+  image: /assets/img/pubs/melt.png
   topics: [Looped LMs, Efficient reasoning]
   tldr: "Looped models trade parameters for compute, but their KV cache grows with every loop. Decoupling the two cuts the KV footprint of Ouro models by 4x (32 GB to 8 GB)."
   links:
@@ -58,7 +58,7 @@
   venue: "White paper + NeurIPS 2025 demo"
   year: 2026
   selected: true
-  image: /assets/img/pubs/edge.svg
+  image: /assets/img/pubs/edge.png
   topics: [Efficient reasoning]
   tldr: "Reasoning LLMs running within on-device budgets. Core contributor: RL pipelines that shorten chains of thought by up to 5x."
   links:
@@ -69,7 +69,6 @@
   venue: "ACL Findings"
   year: 2026
   selected: false
-  image: /assets/img/pubs/lumina.svg
   topics: [Agents]
 
 - title: "Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction"
@@ -77,7 +76,6 @@
   venue: "Preprint"
   year: 2025
   selected: false
-  image: /assets/img/pubs/conformal.svg
   topics: [Conformal prediction, Information theory]
 
 - title: "An Information Theoretic Perspective on Conformal Prediction"
@@ -85,28 +83,49 @@
   venue: "NeurIPS"
   year: 2024
   selected: true
-  image: /assets/img/pubs/conformal.svg
   topics: [Conformal prediction, Information theory]
   tldr: "Links conformal prediction to information theory, giving upper bounds on intrinsic uncertainty and new training objectives for conformal models."
   links:
     arxiv: "https://arxiv.org/abs/2405.02140"
+
+- title: "Simulating, Fast and Slow: Learning Policies for Black-Box Optimization"
+  authors: "Fabio Valerio Massoli, Tim Bakker, Thomas Hehn, Tribhuvanesh Orekondy, Arash Behboodi"
+  venue: "Preprint"
+  year: 2024
+  selected: false
+  image: /assets/img/pubs/simfastslow.png
+  topics: [RL, Inverse problems]
+  tldr: "A learned policy decides when to call an expensive simulator and when to trust a fast differentiable surrogate, cutting simulator calls by up to about 90% on black-box optimization tasks."
+  links:
+    arxiv: "https://arxiv.org/abs/2406.04261"
 
 - title: "Variational Learning ISTA"
   authors: "Fabio Valerio Massoli, Christos Louizos, Arash Behboodi"
   venue: "TMLR"
   year: 2024
   selected: false
-  image: /assets/img/pubs/vlista.svg
   topics: [Inverse problems]
   links:
     arxiv: "https://arxiv.org/abs/2407.06646"
+
+- title: "MOCCA: Multilayer One-Class Classification for Anomaly Detection"
+  authors: "Fabio Valerio Massoli, Fabrizio Falchi, Alperen Kantarci, Şeymanur Akti, Hazim Kemal Ekenel, Giuseppe Amato"
+  venue: "IEEE TNNLS"
+  year: 2022
+  selected: false
+  image: /assets/img/pubs/mocca.png
+  topics: [Anomaly detection]
+  tldr: "Anomaly detection that uses every layer, not just the last: each layer's features are trained to cluster normal data, and their distances are combined at test time."
+  links:
+    arxiv: "https://arxiv.org/abs/2012.12111"
+    paper: "https://doi.org/10.1109/TNNLS.2021.3130074"
 
 - title: "Equivariant Priors for Compressed Sensing with Unknown Orientation"
   authors: "Anna Kuzina, Kumar Pratik, Fabio Valerio Massoli, Arash Behboodi"
   venue: "ICML"
   year: 2022
   selected: false
-  image: /assets/img/pubs/equivariant.svg
+  image: /assets/img/pubs/equivariant.png
   topics: [Inverse problems]
   links:
     paper: "https://proceedings.mlr.press/v162/kuzina22a/kuzina22a.pdf"
