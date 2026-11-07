@@ -1,13 +1,7 @@
 {% assign p = include.pub %}
 {% capture me %}<strong class="me">{{ site.author.name }}</strong>{% endcapture %}
 <article class="pub{% if include.compact %} compact{% endif %}" id="{{ p.title | slugify | truncate: 60, '' }}" data-topics="{{ p.topics | join: '|' }}">
-  <figure class="pub-fig">
-    {% if p.image %}
-      <img src="{{ p.image | relative_url }}" alt="" loading="lazy" width="320" height="240">
-    {% else %}
-      <div class="pub-fig-empty" aria-hidden="true">{{ p.venue }}</div>
-    {% endif %}
-  </figure>
+  <figure class="pub-fig">{% if p.image %}<img src="{{ p.image | relative_url }}" alt="" loading="lazy" width="320" height="240">{% endif %}</figure>
   <div class="pub-body">
     <p class="pub-venue"><span class="venue{% if p.venue == 'Preprint' or p.venue == 'Under review' %} pre{% endif %}">{{ p.venue }} {{ p.year }}</span></p>
     <h3 class="pub-title">
