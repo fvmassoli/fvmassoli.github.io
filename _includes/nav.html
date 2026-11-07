@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      {% for item in site.nav %}
+        {% assign active = false %}
+        {% if item.url == '/' and page.url == '/' %}{% assign active = true %}{% endif %}
+        {% if item.url != '/' and page.url contains item.url %}{% assign active = true %}{% endif %}
+        <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+      <button class="theme-toggle" type="button" aria-label="Switch light or dark theme">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>

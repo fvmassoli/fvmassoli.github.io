@@ -1,0 +1,119 @@
+# One entry per paper, newest first.
+# selected: true -> shown on the home page (with its figure)
+# image          -> teaser figure shown on the left (4:3 works best; PNG/JPG/SVG)
+#                   Replace the placeholder SVGs in /assets/img/pubs/ with real Figure 1s.
+# links          -> any of: paper, arxiv, code, hf, slides, poster, video, blog
+# Leave a link out rather than using "#".
+- title: "Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck"
+  authors: "Fabio Valerio Massoli, Andrey Kuzmin, Arash Behboodi"
+  venue: "NeurIPS"
+  year: 2026
+  selected: true
+  image: /assets/img/pubs/cib.svg
+  topics: [Efficient reasoning, Information theory, RL]
+  tldr: "Treats chain-of-thought as lossy compression. A conditional information bottleneck yields an RL objective that removes redundant reasoning tokens and keeps the ones that matter, with length penalties as a special case."
+  links:
+    arxiv: "https://arxiv.org/abs/2603.08462"
+    neurips: "https://neurips.cc/virtual/2026/poster/148496"
+  bibtex: |
+    @inproceedings{massoli2026reasoning,
+      title     = {Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck},
+      author    = {Massoli, Fabio Valerio and Kuzmin, Andrey and Behboodi, Arash},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year      = {2026}
+    }
+
+- title: "When Do Stored Facts Become Available in Looped Transformers?"
+  authors: "Fabio Valerio Massoli et al."
+  venue: "Under review"
+  year: 2026
+  selected: false
+  topics: [Looped LMs]
+  tldr: "Tracks at which loop iteration memorized facts become usable, separating recall from knowledge use across depth."
+
+- title: "Enabling Dynamic Computation in Looped LMs"
+  authors: "Aayush Mishra, Arnau Padrés Masdemont, Victor Conchello Vendrell, Jordi Ros Giralt, Arash Behboodi, Fabio Valerio Massoli"
+  venue: "Under review"
+  year: 2026
+  selected: true
+  image: /assets/img/pubs/dynamic.svg
+  topics: [Looped LMs, Efficient reasoning]
+  tldr: "Per-token adaptive depth for looped language models: easy tokens leave the loop early, hard tokens keep iterating."
+  links:
+    arxiv: "https://arxiv.org/abs/2610.09013"
+
+- title: "Memory-Efficient Looped Transformer: Decoupling Compute from Memory in Looped Language Models"
+  authors: "Victor Conchello Vendrell, Arnau Padres Masdemont, Niccolò Grillo, Jordi Ros-Giralt, Arash Behboodi, Fabio Valerio Massoli"
+  venue: "Under review"
+  year: 2026
+  selected: true
+  image: /assets/img/pubs/melt.svg
+  topics: [Looped LMs, Efficient reasoning]
+  tldr: "Looped models trade parameters for compute, but their KV cache grows with every loop. Decoupling the two cuts the KV footprint of Ouro models by 4x (32 GB to 8 GB)."
+  links:
+    arxiv: "https://arxiv.org/abs/2605.07721"
+
+- title: "Efficient Reasoning on the Edge"
+  authors: "Yelysei Bondarenko, Thomas Hehn, Rob Hesselink, Romain Lepert, Fabio Valerio Massoli, Evgeny Mironov, Leyla Mirvakhabova, Tribhuvanesh Orekondy, Spyridon Stasis, Andrey Kuzmin, Anna Kuzina, Markus Nagel, Ankita Nayak, Corrado Rainone, Ork de Rooij, Paul N Whatmough, Arash Behboodi, Babak Ehteshami Bejnordi"
+  venue: "White paper + NeurIPS 2025 demo"
+  year: 2026
+  selected: true
+  image: /assets/img/pubs/edge.svg
+  topics: [Efficient reasoning]
+  tldr: "Reasoning LLMs running within on-device budgets. Core contributor: RL pipelines that shorten chains of thought by up to 5x."
+  links:
+    arxiv: "https://arxiv.org/abs/2603.16867"
+
+- title: "LUMINA: Long-horizon Understanding for Multi-turn Interactive Agents"
+  authors: "Amin Rakhsha, Thomas Hehn, Pietro Mazzaglia, Fabio Valerio Massoli, Arash Behboodi, Tribhuvanesh Orekondy"
+  venue: "ACL Findings"
+  year: 2026
+  selected: false
+  image: /assets/img/pubs/lumina.svg
+  topics: [Agents]
+
+- title: "Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction"
+  authors: "Arash Behboodi, Alvaro H.C. Correia, Fabio Valerio Massoli, Christos Louizos"
+  venue: "Preprint"
+  year: 2025
+  selected: false
+  image: /assets/img/pubs/conformal.svg
+  topics: [Conformal prediction, Information theory]
+
+- title: "An Information Theoretic Perspective on Conformal Prediction"
+  authors: "Alvaro H.C. Correia, Fabio Valerio Massoli, Christos Louizos, Arash Behboodi"
+  venue: "NeurIPS"
+  year: 2024
+  selected: true
+  image: /assets/img/pubs/conformal.svg
+  topics: [Conformal prediction, Information theory]
+  tldr: "Links conformal prediction to information theory, giving upper bounds on intrinsic uncertainty and new training objectives for conformal models."
+  links:
+    arxiv: "https://arxiv.org/abs/2405.02140"
+
+- title: "Variational Learning ISTA"
+  authors: "Fabio Valerio Massoli, Christos Louizos, Arash Behboodi"
+  venue: "TMLR"
+  year: 2024
+  selected: false
+  image: /assets/img/pubs/vlista.svg
+  topics: [Inverse problems]
+  links:
+    arxiv: "https://arxiv.org/abs/2407.06646"
+
+- title: "Equivariant Priors for Compressed Sensing with Unknown Orientation"
+  authors: "Anna Kuzina, Kumar Pratik, Fabio Valerio Massoli, Arash Behboodi"
+  venue: "ICML"
+  year: 2022
+  selected: false
+  image: /assets/img/pubs/equivariant.svg
+  topics: [Inverse problems]
+  links:
+    paper: "https://proceedings.mlr.press/v162/kuzina22a/kuzina22a.pdf"
+
+- title: "Detection of Face Recognition Adversarial Attacks"
+  authors: "Fabio Valerio Massoli, Fabio Carrara, Giuseppe Amato, Fabrizio Falchi"
+  venue: "CVIU"
+  year: 2021
+  selected: false
+  topics: [Robustness]

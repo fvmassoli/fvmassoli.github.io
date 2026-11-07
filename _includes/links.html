@@ -1,0 +1,10 @@
+{% assign l = site.author.links %}
+<ul class="links">
+  {% if site.author.email %}<li><a class="btn primary" href="mailto:{{ site.author.email }}">Email me</a></li>{% endif %}
+  {% if site.author.cv %}<li><a class="btn" href="{{ site.author.cv | relative_url }}">Download CV</a></li>{% endif %}
+  {% if l.scholar != "" and l.scholar %}<li><a href="{{ l.scholar }}">Google Scholar</a></li>{% endif %}
+  {% if l.github != "" and l.github %}<li><a href="{{ l.github }}">GitHub</a></li>{% endif %}
+  {% if l.huggingface != "" and l.huggingface %}<li><a href="{{ l.huggingface }}">Hugging Face</a></li>{% endif %}
+  {% if l.linkedin != "" and l.linkedin %}<li><a href="{{ l.linkedin }}">LinkedIn</a></li>{% endif %}
+  {% if l.x != "" and l.x %}<li><a href="{{ l.x }}">X</a></li>{% endif %}
+</ul>

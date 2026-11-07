@@ -1,0 +1,13 @@
+# The research themes on the home page, written as the questions they answer.
+- title: "How short can a chain of thought be?"
+  text: "A reasoning trace should carry only what the answer needs and the prompt does not already give. I turn that idea into RL objectives that cut reasoning length without cutting accuracy."
+  papers: ["Reasoning as Compression", "Efficient Reasoning on the Edge"]
+- title: "How deep should a model think, token by token?"
+  text: "Looped transformers reuse one block many times. I make that depth adaptive per token and cheap in memory, so a model spends compute only where it helps."
+  papers: ["Enabling Dynamic Computation", "Memory-Efficient Looped Transformer", "When Do Stored Facts"]
+- title: "What should we reward during post-training?"
+  text: "Training recipes and rewards that teach models when to reason, how much, and how to stay on track over long, multi-turn tasks."
+  papers: ["LUMINA"]
+- title: "What can a model know about its own uncertainty?"
+  text: "Information-theoretic bounds and objectives, from conformal prediction to compressed sensing."
+  papers: ["Information Theoretic Perspective", "Fundamental bounds"]
