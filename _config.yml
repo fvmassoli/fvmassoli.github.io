@@ -1,0 +1,41 @@
+# ---- Site identity -------------------------------------------------------
+title: Fabio Valerio Massoli
+description: >-
+  Research scientist leading work on efficient reasoning for LLMs at Qualcomm AI Research:
+  RL post-training, looped language models, and information theory.
+author:
+  name: Fabio Valerio Massoli
+  role: Senior Staff Engineer / Manager
+  affiliation: Qualcomm AI Research
+  location: Amsterdam
+  photo: /assets/img/profile.jpg
+  email: fabiovaleriomassoli@gmail.com
+  cv: /assets/files/cv.pdf               # put your PDF here
+  links:                                 # leave empty to hide
+    scholar: https://scholar.google.com/citations?user=b5kxczMAAAAJ
+    github: https://github.com/fvmassoli
+    huggingface: https://huggingface.co/fvmassoli
+    linkedin: https://nl.linkedin.com/in/fvmassoli17
+    x: ""
+
+# ---- URLs ----------------------------------------------------------------
+url: https://fvmassoli.github.io
+baseurl: ""
+
+# ---- Build ---------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+permalink: /blog/:year/:month/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude: [README.md, Gemfile, Gemfile.lock, vendor, .bundle]
+
+nav:
+  - { title: Research,     url: / }
+  - { title: Publications, url: /publications/ }
+  - { title: Talks,        url: /talks/ }
+  - { title: Writing,      url: /blog/ }
+  - { title: About,        url: /about/ }

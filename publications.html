@@ -1,0 +1,34 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+<header class="page-head">
+  <h1>Publications</h1>
+  <p class="muted">
+    {% if site.author.links.scholar != "" %}Citation counts and the full list are on <a href="{{ site.author.links.scholar }}">Google Scholar</a>.{% endif %}
+    <span id="pub-count" aria-live="polite"></span>
+  </p>
+</header>
+
+{% assign all_topics = "" | split: "" %}
+{% for p in site.data.publications %}{% assign all_topics = all_topics | concat: p.topics %}{% endfor %}
+{% assign all_topics = all_topics | uniq | sort %}
+
+<div class="toolbar">
+  <label class="visually-hidden" for="pub-search">Search publications</label>
+  <input id="pub-search" type="search" placeholder="Search by title, author or venue">
+  <div class="filters" role="group" aria-label="Filter by topic">
+    <button type="button" class="chip-btn" aria-pressed="true" data-topic="">All topics</button>
+    {% for t in all_topics %}<button type="button" class="chip-btn" aria-pressed="false" data-topic="{{ t }}">{{ t }}</button>{% endfor %}
+  </div>
+</div>
+
+{% assign by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+{% for group in by_year %}
+  <section class="year-group">
+    <h2 class="year">{{ group.name }}</h2>
+    {% for p in group.items %}{% include pub.html pub=p %}{% endfor %}
+  </section>
+{% endfor %}
+<p id="no-results" class="muted" hidden>No papers match. Clear the search or pick another topic.</p>

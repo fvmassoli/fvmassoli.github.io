@@ -1,0 +1,22 @@
+---
+layout: default
+title: Writing
+permalink: /blog/
+---
+<header class="page-head">
+<h1>Writing</h1>
+<p class="muted">Notes on research, papers I am reading, and ideas that did not fit in a paper. <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></p>
+</header>
+{% assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+{% for y in by_year %}
+  <h2 class="year">{{ y.name }}</h2>
+  <ul class="post-list">
+    {% for post in y.items %}
+      <li>
+        <time>{{ post.date | date: '%b %-d' }}</time>
+        <div><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.description %}<p class="muted">{{ post.description }}</p>{% endif %}</div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

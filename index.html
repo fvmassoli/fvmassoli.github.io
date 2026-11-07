@@ -1,0 +1,66 @@
+---
+layout: default
+title: Research
+---
+<section class="hero">
+  <div class="hero-text">
+    <h1>{{ site.author.name }}</h1>
+    <p class="role">{{ site.author.role }}, {{ site.author.affiliation }}, {{ site.author.location }}</p>
+    <p class="lead">
+      I study how language models can reason with less: fewer tokens, fewer layers, less memory,
+      without losing accuracy. I lead a team working on reinforcement learning for post-training,
+      looped (recurrent-depth) transformers, and the information theory behind both.
+    </p>
+    {% include links.html %}
+  </div>
+  <img class="hero-photo" src="{{ site.author.photo | relative_url }}" alt="Portrait of {{ site.author.name }}" width="220" height="220">
+</section>
+
+<section class="block" aria-labelledby="h-research">
+  <h2 id="h-research">Research agenda</h2>
+  <div class="themes">
+    {% for r in site.data.research %}
+    <div class="theme">
+      <h3>{{ r.title }}</h3>
+      <p>{{ r.text }}</p>
+      {% if r.papers %}
+      <p class="theme-papers">
+        {% for key in r.papers %}{% for p in site.data.publications %}{% if p.title contains key %}<a href="{{ '/publications/' | relative_url }}#{{ p.title | slugify | truncate: 60, '' }}">{{ p.title | split: ':' | first }}</a>{% endif %}{% endfor %}{% endfor %}
+      </p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="block" aria-labelledby="h-pubs">
+  <div class="section-head">
+    <h2 id="h-pubs">Recent publications</h2>
+    <a href="{{ '/publications/' | relative_url }}">See all {{ site.data.publications.size }} papers</a>
+  </div>
+  {% assign selected = site.data.publications | where: "selected", true %}
+  {% for p in selected %}{% include pub.html pub=p %}{% endfor %}
+</section>
+
+<section class="block" aria-labelledby="h-news">
+  <h2 id="h-news">News</h2>
+  <ul class="dated">
+    {% for n in site.data.news limit: 6 %}
+      <li><time datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: '%b %Y' }}</time><span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="block" aria-labelledby="h-writing">
+  <div class="section-head">
+    <h2 id="h-writing">Writing</h2>
+    <a href="{{ '/blog/' | relative_url }}">All posts</a>
+  </div>
+  <ul class="dated">
+    {% for post in site.posts limit: 3 %}
+      <li><time>{{ post.date | date: '%b %Y' }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
