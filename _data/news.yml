@@ -2,7 +2,7 @@
 - date: 2026-11-01
   text: "**NeurIPS 2026** — *Reasoning as Compression* accepted. See you in Sydney!"
 - date: 2026-10-15
-  text: "New preprint: [*Enabling Dynamic Computation in Looped LMs*](https://arxiv.org/abs/2610.09013), under review at ICLR 2027."
+  text: "New preprint: [*Enabling Dynamic Computation in Looped LMs*](https://arxiv.org/abs/2610.09013)"
 - date: 2026-09-20
   text: "New preprint: [*Memory-Efficient Looped Transformer*](https://arxiv.org/abs/2605.07721), 4x smaller KV cache on Ouro models."
 - date: 2026-06-01
