@@ -69,6 +69,7 @@
   venue: "ACL Findings"
   year: 2026
   selected: false
+  image: /assets/img/pubs/lumina.png
   topics: [Agents]
 
 - title: "Fundamental bounds on efficiency-confidence trade-off for transductive conformal prediction"
@@ -76,6 +77,7 @@
   venue: "Preprint"
   year: 2025
   selected: false
+  image: /assets/img/pubs/conformal-bounds.png
   topics: [Conformal prediction, Information theory]
 
 - title: "An Information Theoretic Perspective on Conformal Prediction"
@@ -104,6 +106,7 @@
   venue: "TMLR"
   year: 2024
   selected: false
+  image: /assets/img/pubs/vlista.png
   topics: [Inverse problems]
   links:
     arxiv: "https://arxiv.org/abs/2407.06646"

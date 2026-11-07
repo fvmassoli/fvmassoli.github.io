@@ -112,8 +112,8 @@ main { min-height: 70vh; padding-bottom: 4rem; }
 .pub { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 1.75rem; padding: 1.75rem 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
 .pub:target { background: linear-gradient(var(--accent-2), var(--accent-2)) no-repeat left top / 4px 100%; padding-left: 1rem; }
 .pub-fig { margin: 0; }
-.pub-fig img, .pub-fig-empty { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; padding: 6px; border-radius: 4px; background: var(--mist); border: 1px solid var(--line); }
-.pub-fig img { background: #fff; }
+.pub-fig img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; object-position: center top; }
+.pub-fig-empty { width: 100%; aspect-ratio: 4 / 3; border-radius: 4px; background: var(--mist); }
 .pub-fig-empty { display: grid; place-items: center; font-family: var(--serif); font-size: 1.3rem; color: var(--ink-2); }
 .pub-venue { margin: 0 0 .4rem; }
 .venue { font-size: .82rem; font-weight: 600; color: var(--accent); }
